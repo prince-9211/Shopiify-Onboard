@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Onboarding - Step 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    .wizard-container {
+      max-width: 1100px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .theme-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+    .theme-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .theme-card img {
+      width: 100%;
+      height: auto;
+    }
+    .theme-footer {
+      padding: 15px;
+    }
+    .btn-apply {
+      border: 1px solid #007bff;
+      background-color: #fff;
+      color: #007bff;
+      border-radius: 8px;
+      padding: 5px 15px;
+    }
+    .btn-apply:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .btn-selected {
+      border: 1px solid #28a745;
+      background-color: #fff;
+      color: #28a745;
+      border-radius: 8px;
+      padding: 5px 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wizard-container">
+  <h3 class="mb-4">Apply a theme</h3>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="theme-card">
+        <img src="bag.jpg" alt="Bags Theme">
+        <div class="theme-footer">
+          <h5>Bags theme <small class="text-muted">(recommended)</small></h5>
+          <button class="btn btn-selected w-100">✓</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="theme-card">
+        <img src="menbag.jpg" alt="Flex Theme">
+        <div class="theme-footer">
+          <h5>Flex theme</h5>
+          <button class="btn btn-apply w-100">Apply</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="theme-card">
+        <img src="istockphoto-491750828-2048x2048.jpg" alt="Chic Theme">
+        <div class="theme-footer">
+          <h5>Chic theme</h5>
+          <button class="btn btn-apply w-100">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="d-flex justify-content-end mt-4">
+    <button class="btn btn-primary px-4" id="nextBtn">Next</button>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById("nextBtn").addEventListener("click", function () {
+    window.location.href = "step2.html";
+  });
+</script>
+
+</body>
+</html>

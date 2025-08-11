@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Product UI</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
+    }
+    .main-content {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+    .left-panel {
+      width: 60%;
+      padding: 40px;
+      background-color: #ffffff;
+      overflow-y: auto;
+    }
+    .right-panel {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fdfdfd;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    textarea {
+      height: 80px;
+      resize: vertical;
+    }
+    .desc-icons {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #888;
+    }
+    .desc-icons span {
+      margin-right: 12px;
+      cursor: pointer;
+    }
+    .image-upload {
+      margin-top: 10px;
+      width: 120px;
+      height: 100px;
+      border: 2px dashed #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      background-color: #f0f0f0;
+    }
+    .checkbox-group {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .checkbox-group input[type="text"] {
+      margin-left: 10px;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .product-card {
+      width: 260px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .product-card .card-content {
+      padding: 15px;
+    }
+    .product-card .card-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .product-card .card-desc {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.4;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .product-card .card-price {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .product-card .card-price del {
+      color: #999;
+      margin-right: 8px;
+    }
+    .left-panel::-webkit-scrollbar {
+      width: 8px;
+    }
+    .left-panel::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+    .left-panel::-webkit-scrollbar-thumb:hover {
+      background-color: #888;
+    }
+    /* Footer buttons */
+    .footer {
+      padding: 15px;
+      background-color: #fff;
+      border-top: 1px solid #ccc;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="main-content">
+    <!-- Left Side: Form Section -->
+    <div class="left-panel">
+      <h1>Lets add your first product</h1>
+      <div class="section-title">Basic Details</div>
+
+      <label for="product-name">Product name</label>
+      <input type="text" id="product-name" placeholder="eg - anatomy book">
+
+      <label for="product-desc">Product Description</label>
+      <textarea id="product-desc">Est nisi mollit excepteur laboris tempor fugiat laborum occaecat laborum cillum incididunt ut sit dolor. Consequat veniam ut mollit nos</textarea>
+
+      <div class="desc-icons">
+        <span>🌐</span>
+        <span>🅱️</span>
+        <span>📷</span>
+        <span>🔤</span>
+        <span>⚙️</span>
+      </div>
+
+      <label>Add Image(s)</label>
+      <div class="image-upload">📷</div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" checked disabled>
+        <label for="sku">this product has an SKU code</label>
+      </div>
+      <input type="text" value="PROD0001" disabled>
+    </div>
+
+    <!-- Right Side: Preview Section -->
+    <div class="right-panel">
+      <div class="product-card">
+        <img src="istockphoto-694801740-612x612.jpg" alt="Product Image">
+        <div class="card-content">
+          <div class="card-title">Product title</div>
+          <div class="card-desc">
+            Esse minim eiusmod amet et incididunt magna consectetur laborum. Ipsum et cillum do exercitation nostrud nostrud ex. Consectetur Lorem nostrud sint adipisicing amet ipsum cupidatat. Lorem adipisicing veniam officia duis excepteur Lorem labore. Non eu non
+          </div>
+          <div class="card-price">
+            <del>RS 100</del> RS 90
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Buttons -->
+  <div class="footer">
+    <button class="btn btn-secondary" id="backBtn">Back</button>
+    <button class="btn btn-primary" id="nextBtn">Next</button>
+  </div>
+</div>
+
+<script>
+  document.getElementById("backBtn").addEventListener("click", function () {
+    window.location.href = "step2.html";
+  });
+  document.getElementById("nextBtn").addEventListener("click", function () {
+    window.location.href = "step4.html";
+  });
+</script>
+
+</body>
+</html>

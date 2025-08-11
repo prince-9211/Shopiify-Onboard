@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Onboarding - Step 2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    .wizard-container {
+      max-width: 1100px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .form-section {
+      padding: 20px;
+    }
+    .diagram {
+      background-color: #d8f3d8;
+      padding: 30px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .diagram-box {
+      padding: 15px 20px;
+      color: white;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .blue-box { background-color: #3f51b5; }
+    .yellow-box { background-color: #ffcc00; color: black; }
+    .arrow {
+      margin: 10px 0;
+      font-size: 20px;
+      text-align: center;
+    }
+    .product-box { background-color: #a5b4fc; color: black; }
+  </style>
+</head>
+<body>
+
+<div class="wizard-container">
+  <div class="row">
+    <!-- Left side form -->
+    <div class="col-md-6 form-section">
+      <h3 class="mb-4 fw-bold">Lets add a type, Category and Sub-category</h3>
+      
+      <div class="mb-3">
+        <label class="form-label">Add a product type</label>
+        <input type="text" class="form-control" placeholder="eg - books">
+      </div>
+      
+      <div class="mb-3">
+        <label class="form-label">Add a category (optional)</label>
+        <input type="text" class="form-control" placeholder="eg - Academic book">
+      </div>
+      
+      <div class="mb-4">
+        <label class="form-label">Add a sub-category (optional)</label>
+        <input type="text" class="form-control" placeholder="eg - medical book">
+      </div>
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-secondary px-4">Back</button>
+        <button id="nextBtn" class="btn btn-primary px-4">Next</button>
+      </div>
+    </div>
+
+    <!-- Right side diagram -->
+    <div class="col-md-6 diagram">
+      <div>
+        <div class="diagram-box blue-box">Product type</div>
+        <div class="arrow">⬇</div>
+        <div class="diagram-box yellow-box">Category</div>
+        <div class="arrow">⬇</div>
+        <div class="diagram-box yellow-box">Sub-Category</div>
+        <div class="arrow">➡</div>
+        <div class="diagram-box product-box">Product</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom Script for Redirection -->
+<script>
+  document.getElementById('nextBtn').addEventListener('click', function () {
+    // Redirect to step3.html
+    window.location.href = 'step3.html';
+  });
+</script>
+
+</body>
+</html>
